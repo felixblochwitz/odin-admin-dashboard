@@ -39,28 +39,65 @@ body {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 80px;
+}
+
+.topbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .topbar-row input {
   background-color: #dee4ee;
   border: 0px;
   border-radius: 10px;
+  width: 100%;
+  height: 2em;
+  margin-left: 1em;
 }
 
 .profile-pic {
   border-radius: 50%;
 }
 
+.mdi-bell-ring-outline {
+  font-size: 1.3em;
+}
+
 .profile-pic.small {
-  width: 50px;
+  width: 40px;
   height: auto;
 }
 
 .profile-pic.large {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
 ul {
   list-style-type: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 2em;
+  padding-right: 4em;
+  font-size: 1.3em;
+}
+
+.profile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.profile-nav-element {
+  padding-left: .5em;
+  padding-right: .5em;
 }
