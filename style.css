@@ -21,14 +21,16 @@ body {
 }
 
 .site-container {
-  width: 1340px;
+  width: 70%;
   display: grid;
   grid-template-columns: 1fr 3.8fr;
+  margin: 0 auto;
 }
 
 .sidebar-container {
   background-color: #1992d4;
   color: white;
+  grid-area: 1 / 1 / 3 / 2;
 }
 
 .dashboard-icon {
@@ -37,18 +39,14 @@ body {
 
 .topbar-container {
   background-color: white;
+  box-shadow: 0px 0px 10px  -5px black;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 80px;
+  z-index:1;
 }
 
-.topbar-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.topbar-row input {
+.search input {
   background-color: #dee4ee;
   border: 0px;
   border-radius: 10px;
@@ -79,25 +77,113 @@ ul {
   list-style-type: none;
 }
 
-.search {
+.topbar-div {
   display: flex;
   align-items: center;
-  flex-grow: 1;
+}
+
+.topbar-div.left {
   padding-left: 2em;
   padding-right: 4em;
+}
+
+.topbar-div.right {
+  padding-right: 4em;
+}
+
+.search {
+  flex-grow: 1;
   font-size: 1.3em;
 }
 
 .profile-nav {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-right: 4em;
   font-size: 1.1em;
   font-weight: bold;
 }
 
 .profile-nav-element {
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.greeting {
+  font-weight: bold;
+}
+
+.salutation {
+  margin-left: 1em;
+}
+
+.greeting .personal {
+  font-size: 1.25em;
+}
+
+.topbar-div.buttons {
+  justify-content: space-between;
+}
+
+.topbar-div.buttons button {
+  color: white;
+  font-weight: bold;
+  background-color: #1992d4;
+  border-style: none;
+  border-radius: 1.25em;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+}
+
+.main-container {
+  background-color: #e2e8f0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+h4 {
+  margin: 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2em;
+  padding-left: 2em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.projects h4 {
+  padding-left: 1em;
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.project {
+  background-color: white;
+  border-left: #f0b429 solid 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 1px 5px 5px rgb(0, 0, 0, 10%);
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.project p {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.project-icons {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.project-icons * {
+  margin: .5em;
+}
+
+.announcments {
+  padding-top: 2em;
+  padding-left: 2em;
+  font-weight: bold;
+  font-size: 1.2em;
 }
