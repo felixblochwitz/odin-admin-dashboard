@@ -80,6 +80,7 @@ ul {
 .topbar-div {
   display: flex;
   align-items: center;
+  padding-bottom: 1em;
 }
 
 .topbar-div.left {
@@ -151,7 +152,7 @@ h4 {
   font-size: 1.2em;
 }
 
-.projects h4 {
+.projects > h4 {
   padding-left: 1em;
   grid-area: 1 / 1 / 3 / 3;
 }
@@ -170,6 +171,7 @@ h4 {
 .project p {
   font-size: 1em;
   font-weight: normal;
+  color: #636363;
 }
 
 .project-icons {
@@ -181,9 +183,67 @@ h4 {
   margin: .5em;
 }
 
-.announcments {
+.right-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  align-content: start;
   padding-top: 2em;
   padding-left: 2em;
+  padding-right: 2em;
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.right-container h4 {
+  margin-bottom: 1em;
+}
+
+.announcments {
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 1px 5px 5px rgb(0, 0, 0, 10%);
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.announcments p {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #636363;
+}
+
+.announcments hr {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: none;
+  border-top: 1px solid #636363;
+}
+
+.trending {
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 1px 5px 5px rgb(0, 0, 0, 10%);
+}
+
+.trender {
+  display: flex;
+  font-size: .8em;
+  font-weight: normal;
+  color: #636363;
+  margin: 1em;
+  align-items: center;
+}
+
+.trender img {
+  height: 2em;
+  width: auto;
+  margin-right: 1em;
+}
+
+.trender span {
+  color: black;
+  display: inline;
 }
